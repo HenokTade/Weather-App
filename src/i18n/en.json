@@ -1,0 +1,118 @@
+{
+  "app": {
+    "title": "EthioWeather",
+    "subtitle": "የኢትዮጵያ የአየር ሁኔታ"
+  },
+  "search": {
+    "placeholder": "Search city...",
+    "placeholderAm": "ከተማ ፈልግ...",
+    "noResults": "No cities found",
+    "detectLocation": "Detect Location",
+    "detectLocationAm": "አካባቢ አግኝ"
+  },
+  "weather": {
+    "feelsLike": "Feels like",
+    "feelsLikeAm": "ይሰማል",
+    "humidity": "Humidity",
+    "humidityAm": "እርጋታ",
+    "wind": "Wind",
+    "windAm": "ነፋስ",
+    "pressure": "Pressure",
+    "pressureAm": "ግፊት",
+    "uvIndex": "UV Index",
+    "uvIndexAm": "UV ማውጫ",
+    "visibility": "Visibility",
+    "visibilityAm": "ማየት",
+    "sunrise": "Sunrise",
+    "sunriseAm": "ጸባሪት",
+    "sunset": "Sunset",
+    "sunsetAm": "ምሽት",
+    "rainChance": "Rain chance",
+    "rainChanceAm": "ዝናብ ዕድል",
+    "kiremt": "Kiremt Season",
+    "kiremtAm": "ኪረምት ወቅት"
+  },
+  "forecast": {
+    "title": "5-Day Forecast",
+    "titleAm": "5-ቀን ግምት",
+    "hourly": "Hourly",
+    "hourlyAm": "ሰአታት",
+    "daily": "Daily",
+    "dailyAm": "ቀናት"
+  },
+  "units": {
+    "celsius": "°C",
+    "fahrenheit": "°F",
+    "ms": "m/s",
+    "mph": "mph",
+    "hpa": "hPa",
+    "km": "km",
+    "mi": "mi"
+  },
+  "days": {
+    "sun": "Sun",
+    "mon": "Mon",
+    "tue": "Tue",
+    "wed": "Wed",
+    "thu": "Thu",
+    "fri": "Fri",
+    "sat": "Sat",
+    "sunAm": "እሑድ",
+    "monAm": "ሰኞ",
+    "tueAm": "ማክሰኞ",
+    "wedAm": "ረቡዕ",
+    "thuAm": "ሐሙስ",
+    "friAm": "ዐርብ",
+    "satAm": "ቅዳሜ"
+  },
+  "conditions": {
+    "clear": "Clear",
+    "clouds": "Cloudy",
+    "rain": "Rain",
+    "drizzle": "Drizzle",
+    "thunderstorm": "Thunderstorm",
+    "snow": "Snow",
+    "mist": "Mist",
+    "fog": "Fog",
+    "haze": "Haze",
+    "clearAm": "ግልጽ",
+    "cloudsAm": "ደመና",
+    "rainAm": "ዝናብ",
+    "drizzleAm": "ቀላል ዝናብ",
+    "thunderstormAm": "ነበልባል",
+    "snowAm": "በረዶ",
+    "mistAm": "ጭጋግ",
+    "fogAm": "ቁጭት",
+    "hazeAm": "ጭምር"
+  },
+  "errors": {
+    "fetchFailed": "Failed to fetch weather data",
+    "fetchFailedAm": "የአየር ሁኔታ መረጃ ማግኘት አልተሳካም",
+    "noInternet": "No internet connection",
+    "noInternetAm": "የትስስር ግንኙነት የለም",
+    "locationDenied": "Location access denied",
+    "locationDeniedAm": "አካባቢ ማግኘት ተከልክሏል",
+    "tryAgain": "Try again",
+    "tryAgainAm": "እንደገና ሞክር"
+  },
+  "settings": {
+    "language": "Language",
+    "languageAm": "ቋንቋ",
+    "units": "Units",
+    "unitsAm": "መለኪያ",
+    "darkMode": "Dark Mode",
+    "darkModeAm": "ጨለማ ሁኔታ"
+  },
+  "offline": {
+    "message": "You're offline",
+    "messageAm": "ከተስስር ግንኙነት ውጪ",
+    "lastUpdated": "Last updated",
+    "lastUpdatedAm": "መጨረሻ የተሻሻለ"
+  },
+  "share": {
+    "button": "Share",
+    "buttonAm": "አጋራ",
+    "whatsapp": "Share via WhatsApp",
+    "whatsappAm": "በዊታስአፕ አጋራ"
+  }
+}

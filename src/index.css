@@ -1,0 +1,41 @@
+@import "tailwindcss";
+
+:root {
+  --ethiopia-green: #078838;
+  --ethiopia-gold: #FCDD09;
+  --ethiopia-red: #DA121A;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.weather-gradient-sunny {
+  background: linear-gradient(180deg, #4A90D9 0%, #87CEEB 50%, #FCDD09 100%);
+}
+
+.weather-gradient-cloudy {
+  background: linear-gradient(180deg, #6B7B8C 0%, #9CA3AF 50%, #D1D5DB 100%);
+}
+
+.weather-gradient-rainy {
+  background: linear-gradient(180deg, #374151 0%, #4B5563 50%, #6B7280 100%);
+}
+
+.weather-gradient-night {
+  background: linear-gradient(180deg, #1E3A5F 0%, #2D4A6F 50%, #3D5A80 100%);
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
