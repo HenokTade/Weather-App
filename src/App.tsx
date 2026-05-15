@@ -24,7 +24,7 @@ function App() {
   const [isOffline, setIsOffline] = useState(!navigator.onLine);
 
   const { location, detectLocation } = useGeolocation();
-  const { data, isLoading, isError, error, refetch } = useWeather(
+  const { data, isLoading, isError, error, refetch, dataUpdatedAt } = useWeather(
     selectedCity.lat,
     selectedCity.lon
   );
@@ -110,6 +110,7 @@ function App() {
               weather={data.current}
               cityName={selectedCity.name}
               isCelsius={isCelsius}
+              lastUpdated={dataUpdatedAt}
             />
             
             {data.hourly && data.hourly.length > 0 && (

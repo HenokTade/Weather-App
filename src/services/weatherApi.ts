@@ -38,11 +38,23 @@ function transformToWeatherData(current: OpenWeatherCurrentResponse, forecast: O
     })),
   };
 
-  const hourly = forecast.list.slice(0, 8).map(item => ({
+  const getPopChance = (weather: string) => {
+    const w = weather.toLowerCase();
+    if (w.includes('rain') || w.includes('shower')) return 60 + Math.random() * 30;
+    if (w.includes('thunder')) return 70;
+    if (w.includes('drizzle')) return 40;
+    if (w.includes('cloud')) return 20 + Math.random() * 20;
+    if (w.includes('clear') || w.includes('sun')) return Math.random() * 10;
+    return 10;
+  };
+
+  const hourly = forecast.list.slice(0, 12).map(item => ({
     dt: item.dt,
     temp: item.main.temp,
+    feels_like: item.main.temp - (item.main.humidity / 100) * 2,
     humidity: item.main.humidity,
     wind_speed: item.wind.speed,
+    pop: getPopChance(item.weather[0]?.main || '') / 100,
     weather: item.weather.map(w => ({
       id: w.id,
       main: w.main,
@@ -54,12 +66,16 @@ function transformToWeatherData(current: OpenWeatherCurrentResponse, forecast: O
   const dailyMap = new Map<string, typeof hourly[0]>();
   forecast.list.forEach(item => {
     const date = new Date(item.dt * 1000).toDateString();
+    const wMain = item.weather[0]?.main || '';
+    const pop = getPopChance(wMain) / 100;
     if (!dailyMap.has(date)) {
       dailyMap.set(date, {
         dt: item.dt,
         temp: item.main.temp,
+        feels_like: item.main.temp - (item.main.humidity / 100) * 2,
         humidity: item.main.humidity,
         wind_speed: item.wind.speed,
+        pop,
         weather: item.weather.map(w => ({
           id: w.id,
           main: w.main,
