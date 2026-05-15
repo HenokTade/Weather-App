@@ -15,13 +15,13 @@ export function DailyForecast({ daily, isCelsius }: DailyForecastProps) {
   const unit = isCelsius ? '°C' : '°F';
   const isKiremt = KIREMT_MONTHS.includes(new Date().getMonth() + 1);
 
-  const fiveDayForecast = daily.slice(1, 6);
+  const availableDays = daily.slice(1);
 
   return (
     <div className="px-4 py-6">
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-lg font-semibold">
-          {isAmharic ? '5-ቀን ግምት' : '5-Day Forecast'}
+          {isAmharic ? `${availableDays.length}-ቀን ግምት` : `${availableDays.length}-Day Forecast`}
         </h2>
         {isKiremt && (
           <span className="px-3 py-1 bg-sky-500 text-white text-xs rounded-full">
@@ -30,7 +30,7 @@ export function DailyForecast({ daily, isCelsius }: DailyForecastProps) {
         )}
       </div>
       <div className="space-y-3">
-        {fiveDayForecast.map((day, index) => (
+        {availableDays.map((day, index) => (
           <div
             key={index}
             className="bg-white/80 backdrop-blur rounded-xl p-4 flex items-center gap-4"

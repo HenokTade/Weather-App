@@ -27,7 +27,7 @@ export function CurrentWeatherDisplay({ weather, cityName, isCelsius }: CurrentW
         })}
       </p>
       
-      <div className="flex items-center justify-center mb-4">
+      <div className="flex items-center justify-center mb-4 animate-bounce-slow">
         <img
           src={getWeatherIconUrl(weather.weather[0]?.icon || '01d')}
           alt={weather.weather[0]?.description}
