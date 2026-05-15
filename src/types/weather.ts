@@ -10,25 +10,27 @@ export interface CurrentWeather {
   feels_like: number;
   humidity: number;
   pressure: number;
+  temp_min: number;
+  temp_max: number;
   wind_speed: number;
-  wind_deg: number;
-  clouds: number;
-  visibility: number;
-  uvi: number;
+  wind_deg?: number;
+  clouds?: number;
+  visibility?: number;
+  uvi?: number;
   weather: WeatherCondition[];
-  sunrise: number;
-  sunset: number;
+  sunrise?: number;
+  sunset?: number;
   dt: number;
 }
 
 export interface HourlyWeather {
   dt: number;
   temp: number;
-  feels_like: number;
+  feels_like?: number;
   humidity: number;
   wind_speed: number;
   weather: WeatherCondition[];
-  pop: number;
+  pop?: number;
 }
 
 export interface DailyWeather {
@@ -37,14 +39,14 @@ export interface DailyWeather {
     day: number;
     min: number;
     max: number;
-    night: number;
+    night?: number;
   };
   humidity: number;
   wind_speed: number;
   weather: WeatherCondition[];
-  pop: number;
-  sunrise: number;
-  sunset: number;
+  pop?: number;
+  sunrise?: number;
+  sunset?: number;
   summary?: string;
 }
 

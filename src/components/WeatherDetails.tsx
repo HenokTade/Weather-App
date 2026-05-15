@@ -12,11 +12,11 @@ export function WeatherDetails({ weather }: WeatherDetailsProps) {
   const isAmharic = i18n.language === 'am';
 
   const details = [
-    { icon: Wind, label: isAmharic ? 'ነፋስ' : 'Wind', value: `${Math.round(weather.wind_speed)} m/s ${getWindDirection(weather.wind_deg)}` },
+    { icon: Wind, label: isAmharic ? 'ነፋስ' : 'Wind', value: `${Math.round(weather.wind_speed)} m/s ${weather.wind_deg ? getWindDirection(weather.wind_deg) : ''}` },
     { icon: Droplets, label: isAmharic ? 'እርጋታ' : 'Humidity', value: `${weather.humidity}%` },
     { icon: Gauge, label: isAmharic ? 'ግፊት' : 'Pressure', value: `${weather.pressure} hPa` },
-    { icon: Eye, label: isAmharic ? 'ማየት' : 'Visibility', value: `${(weather.visibility / 1000).toFixed(1)} km` },
-    { icon: Sun, label: isAmharic ? 'UV ማውጫ' : 'UV Index', value: Math.round(weather.uvi).toString() },
+    { icon: Eye, label: isAmharic ? 'ማየት' : 'Visibility', value: weather.visibility ? `${(weather.visibility / 1000).toFixed(1)} km` : 'N/A' },
+    { icon: Sun, label: isAmharic ? 'UV ማውጫ' : 'UV Index', value: weather.uvi ? Math.round(weather.uvi).toString() : 'N/A' },
   ];
 
   return (

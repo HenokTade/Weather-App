@@ -44,11 +44,11 @@ export function CurrentWeatherDisplay({ weather, cityName, isCelsius }: CurrentW
       <div className="flex justify-center gap-8 mt-8 text-sm">
         <div className="flex flex-col items-center">
           <span className="opacity-70">{isAmharic ? 'ጸባሪት' : 'Sunrise'}</span>
-          <span className="font-semibold">{formatTime(weather.sunrise)}</span>
+          <span className="font-semibold">{weather.sunrise ? formatTime(weather.sunrise) : '--:--'}</span>
         </div>
         <div className="flex flex-col items-center">
           <span className="opacity-70">{isAmharic ? 'ምሽት' : 'Sunset'}</span>
-          <span className="font-semibold">{formatTime(weather.sunset)}</span>
+          <span className="font-semibold">{weather.sunset ? formatTime(weather.sunset) : '--:--'}</span>
         </div>
       </div>
     </div>

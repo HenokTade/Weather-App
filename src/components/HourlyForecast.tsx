@@ -37,9 +37,9 @@ export function HourlyForecast({ hourly, isCelsius }: HourlyForecastProps) {
             <p className="font-semibold mt-2">
               {isCelsius ? Math.round(hour.temp) : Math.round(hour.temp * 9/5 + 32)}{unit}
             </p>
-            {hour.pop > 0.1 && (
+            {(hour.pop ?? 0) > 0.1 && (
               <p className="text-xs text-sky-500 mt-1">
-                {Math.round(hour.pop * 100)}%
+                {Math.round((hour.pop ?? 0) * 100)}%
               </p>
             )}
           </div>

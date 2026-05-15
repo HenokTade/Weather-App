@@ -47,9 +47,9 @@ export function DailyForecast({ daily, isCelsius }: DailyForecastProps) {
               <p className="text-sm capitalize text-gray-600">
                 {day.weather[0]?.description}
               </p>
-              {day.pop > 0.1 && (
+              {(day.pop ?? 0) > 0.1 && (
                 <p className="text-xs text-sky-500">
-                  {isAmharic ? 'ዝናብ' : 'Rain'}: {Math.round(day.pop * 100)}%
+                  {isAmharic ? 'ዝናብ' : 'Rain'}: {Math.round((day.pop ?? 0) * 100)}%
                 </p>
               )}
             </div>
